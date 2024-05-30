@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "animalhandbook",
+	"version": "${version}",
+	"name": "AnimalHandbook",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Scorpio4938"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/animalhandbook/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.scorpio4938.animalhandbook.AnimalHandbook"
+		],
+		"client": [
+			"com.scorpio4938.animalhandbook.AnimalHandbookClient"
+		],
+		"fabric-datagen": [
+			"com.scorpio4938.animalhandbook.AnimalHandbookDataGenerator"
+		]
+	},
+	"mixins": [
+		"animalhandbook.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

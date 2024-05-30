@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "com.scorpio4938.animalhandbook.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+      "AnimalHandbookMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}
