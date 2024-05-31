@@ -1,5 +1,6 @@
 package com.scorpio4938.animalhandbook;
 
+import com.scorpio4938.animalhandbook.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.entity.boss.dragon.phase.StrafePlayerPhase;
@@ -20,5 +21,6 @@ public class AnimalHandbook implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+		ModItems.registerModItems();
 	}
 }

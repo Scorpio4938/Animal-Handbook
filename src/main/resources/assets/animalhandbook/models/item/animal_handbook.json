@@ -1,0 +1,16 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:item/generated",
+	"textures": {
+		"layer0": "animalhandbook:item/animal_handbook"
+	},
+	"display": {},
+	"groups": [
+		{
+			"name": "book",
+			"origin": [8, 8, 8],
+			"color": 0,
+			"children": []
+		}
+	]
+}
