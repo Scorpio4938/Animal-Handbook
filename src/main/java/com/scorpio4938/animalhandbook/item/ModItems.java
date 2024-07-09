@@ -1,6 +1,7 @@
 package com.scorpio4938.animalhandbook.item;
 
 import com.scorpio4938.animalhandbook.AnimalHandbook;
+import com.scorpio4938.animalhandbook.item.custom.Handbook;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -11,7 +12,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item ANIMAL_HANDBOOK = registerItems("animal_handbook", new Item(new FabricItemSettings()));
+    public static final Item ANIMAL_HANDBOOK = registerItems("animal_handbook", new Handbook(new FabricItemSettings()));
 
     private static void addItemsToItemGroup(FabricItemGroupEntries fabricItemGroupEntries) {
         fabricItemGroupEntries.add(ANIMAL_HANDBOOK);
