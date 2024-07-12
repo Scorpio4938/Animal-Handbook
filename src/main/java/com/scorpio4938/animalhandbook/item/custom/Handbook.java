@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 
 public class Handbook extends Item {
     public Handbook(Settings settings) {
-        super(settings.maxCount(1));
+        super(settings);
     }
 
     @Override
@@ -21,7 +21,7 @@ public class Handbook extends Item {
         // Open custom screen here
         if (world.isClient) {
 //            MinecraftClient.getInstance().setScreen(new BookScreen());
-            MinecraftClient.getInstance().setScreenAndRender(new CustomBookScreen(Text.of("Custom Book"), user.getStackInHand(hand)));
+            MinecraftClient.getInstance().setScreenAndRender(new CustomBookScreen(user.getInventory(), user.getStackInHand(hand)));
 //            MinecraftClient.getInstance().setScreenAndRender(new BookScreen());
 
         }

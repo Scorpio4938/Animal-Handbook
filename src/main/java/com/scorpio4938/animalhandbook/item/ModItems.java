@@ -12,7 +12,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
-    public static final Item ANIMAL_HANDBOOK = registerItems("animal_handbook", new Handbook(new FabricItemSettings()));
+    public static final Item ANIMAL_HANDBOOK = registerItems("animal_handbook", new Handbook(new FabricItemSettings().maxCount(1)));
 
     private static void addItemsToItemGroup(FabricItemGroupEntries fabricItemGroupEntries) {
         fabricItemGroupEntries.add(ANIMAL_HANDBOOK);
