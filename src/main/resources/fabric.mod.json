@@ -3,7 +3,7 @@
 	"id": "animalhandbook",
 	"version": "${version}",
 	"name": "AnimalHandbook",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A mod for Minecraft fabric that tries to introduce a handbook full of animals in the game.",
 	"authors": [
 		"Scorpio4938"
 	],
