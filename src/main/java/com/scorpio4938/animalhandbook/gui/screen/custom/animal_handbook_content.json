@@ -1,0 +1,10 @@
+{
+  "type": "animal_handbook_content",
+  "object": "animal_handbook",
+  "content": {
+    "pages": [
+      "Default Text page 1 from json file :)",
+      "Page 2 :Q"
+    ]
+  }
+}
