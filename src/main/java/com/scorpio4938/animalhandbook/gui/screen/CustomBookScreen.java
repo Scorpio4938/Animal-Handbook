@@ -8,8 +8,14 @@ import net.minecraft.nbt.NbtList;
 import net.minecraft.nbt.NbtString;
 
 public class CustomBookScreen extends BookScreen {
-    private static final String DEFAULT_TEXT_1 = "Default Text page 1 :)";
+    private static final String BOOK_AUTHOR = "Author";
+
+    private static final String BOOK_TITLE = "Custom Book";
+
+    private static final String DEFAULT_TEXT_1 = "This is a Animal Handbook, where you can find every and any animals in the game. Here we include values and settings of these animals.";
+
     private static final String DEFAULT_TEXT_2 = "Default Text page 2 :D";
+
     private ItemStack book;
 
     public CustomBookScreen(PlayerInventory playerInventory, ItemStack book) {
@@ -29,7 +35,6 @@ public class CustomBookScreen extends BookScreen {
 //        super.render(context, mouseX, mouseY, delta);
 //    }
 
-
     private void setDefaultText(ItemStack book) {
         /*
          * Solved
@@ -41,8 +46,8 @@ public class CustomBookScreen extends BookScreen {
         NbtCompound nbt = book.getOrCreateNbt();
 
         // Set the title, and author of the book.
-        nbt.putString("author", "Author");
-        nbt.putString("title", "Custom Book");
+        nbt.putString("author", BOOK_AUTHOR);
+        nbt.putString("title", BOOK_TITLE);
 //        nbt.putString("pages", "[{\"text\":\"" + DEFAULT_TEXT_1 + "\"}]");
 
         // Create a list for the pages.
@@ -52,8 +57,8 @@ public class CustomBookScreen extends BookScreen {
 
         // Add the pages to the book tag.
         nbt.put("pages", pages);
-        
+
+        // Set Nbt.
         book.setNbt(nbt);
     }
-
 }
