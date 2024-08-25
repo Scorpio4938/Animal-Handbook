@@ -1,4 +1,4 @@
-package com.scorpio4938.animalhandbook.service;
+package com.scorpio4938.animalhandbook.service.reader;
 
 import com.scorpio4938.animalhandbook.service.debug.DebugHandler;
 import net.minecraft.entity.EntityType;

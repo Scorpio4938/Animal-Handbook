@@ -2,7 +2,7 @@ package com.scorpio4938.animalhandbook;
 
 import com.scorpio4938.animalhandbook.item.ModItemGroup;
 import com.scorpio4938.animalhandbook.item.ModItems;
-import com.scorpio4938.animalhandbook.service.EntityTypeReader;
+import com.scorpio4938.animalhandbook.service.reader.EntityTypeReader;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
