@@ -3,7 +3,7 @@ package com.scorpio4938.animalhandbook.service.reader.modules;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.mojang.authlib.minecraft.client.ObjectMapper;
-import com.scorpio4938.animalhandbook.gui.screen.custom.AnimalHandbookContent;
+import com.scorpio4938.animalhandbook.service.reader.modules.custom.AnimalHandbookContent;
 
 import java.io.FileReader;
 import java.io.IOException;
