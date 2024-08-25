@@ -2,6 +2,7 @@ package com.scorpio4938.animalhandbook;
 
 import com.scorpio4938.animalhandbook.item.ModItemGroup;
 import com.scorpio4938.animalhandbook.item.ModItems;
+import com.scorpio4938.animalhandbook.service.EntityTypeReader;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -23,5 +24,7 @@ public class AnimalHandbook implements ModInitializer {
         LOGGER.info("Hello Fabric world!");
         ModItems.registerModItems();
         ModItemGroup.registerModItemGroup();
+
+        EntityTypeReader.init();
     }
 }
