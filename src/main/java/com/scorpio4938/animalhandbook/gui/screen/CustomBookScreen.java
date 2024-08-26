@@ -1,5 +1,7 @@
 package com.scorpio4938.animalhandbook.gui.screen;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ingame.BookScreen;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
@@ -7,7 +9,16 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;
 import net.minecraft.nbt.NbtString;
 
+@Environment(EnvType.CLIENT)
 public class CustomBookScreen extends BookScreen {
+    private final int largerWidth = 256; // Custom width
+
+    private final int largerHeight = 180; // Custom height
+
+    private final int customBackgroundWidth = 230; // Custom background size
+
+    private final int customBackgroundHeight = 200;
+
     private static final String BOOK_AUTHOR = "Author";
 
     private static final String BOOK_TITLE = "Custom Book";

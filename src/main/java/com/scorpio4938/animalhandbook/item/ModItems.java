@@ -4,14 +4,18 @@ import com.scorpio4938.animalhandbook.AnimalHandbook;
 import com.scorpio4938.animalhandbook.item.custom.Handbook;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModItems {
+    // This will return a error message when running datagen, as it prints:
+    // 'Caused by: java.lang.ExceptionInInitializerError
+    // Caused by: java.lang.RuntimeException: Cannot load class net.minecraft.client.gui.screen.Screen in environment type SERVER',
+    // which is probably caused by the call for the custom screen (although I've specified 'isClient' yet it somehow did not work, no idea what caused this).
+    // For future action to runDatagen, it is insofar recommend to ture the following 'new HandBook()' to 'new Item()'.
+    // Hoping to fix this issue.
     public static final Item ANIMAL_HANDBOOK = registerItems("animal_handbook", new Handbook(new FabricItemSettings().maxCount(1)));
 
     private static void addItemsToItemGroup(FabricItemGroupEntries fabricItemGroupEntries) {

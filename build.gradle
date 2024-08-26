@@ -37,6 +37,8 @@ dependencies {
 
     // Mod API.
 //    modApi "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_api_version}" exclude group: "net.fabricmc.fabric-api" // Version link: https://linkie.shedaniel.dev/dependencies?loader=fabric&version=1.20
+//    modCompileOnly "me.shedaniel:RoughlyEnoughItems-api-fabric:${rei_api_version}"
+//    modRuntimeOnly "me.shedaniel:RoughlyEnoughItems-fabric:${rei_api_version}"
 
     // Other libs.
 //    implementation "com.fasterxml.jackson.core:jackson-databind:${project.jackson_version}"

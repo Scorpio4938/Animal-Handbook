@@ -1,11 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "pattern": [
-    " A ",
-    "A#A",
-    " A "
-  ],
   "key": {
     "#": {
       "item": "minecraft:book"
@@ -14,7 +9,13 @@
       "item": "minecraft:diamond"
     }
   },
+  "pattern": [
+    " A ",
+    "A#A",
+    " A "
+  ],
   "result": {
     "item": "animalhandbook:animal_handbook"
-  }
+  },
+  "show_notification": true
 }
