@@ -1,13 +1,19 @@
 package com.scorpio4938.animalhandbook.gui.screen;
 
+import com.scorpio4938.animalhandbook.service.debug.DebugHandler;
+import com.scorpio4938.animalhandbook.service.reader.EntityTypeReader;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.gui.screen.ingame.BookScreen;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.nbt.NbtList;
 import net.minecraft.nbt.NbtString;
+import net.minecraft.registry.Registries;
+
+import java.util.Map;
 
 @Environment(EnvType.CLIENT)
 public class CustomBookScreen extends BookScreen {
@@ -64,12 +70,20 @@ public class CustomBookScreen extends BookScreen {
         // Create a list for the pages.
         NbtList pages = new NbtList();
         pages.add(NbtString.of(DEFAULT_TEXT_1));
-        pages.add(NbtString.of(DEFAULT_TEXT_2));
+//        pages.add(NbtString.of(DEFAULT_TEXT_2));
+        setContent(pages);
 
         // Add the pages to the book tag.
         nbt.put("pages", pages);
 
         // Set Nbt.
         book.setNbt(nbt);
+    }
+
+    private void setContent(NbtList pages) {
+        for (Map.Entry<String, EntityType<?>> entityInfo : EntityTypeReader.getEntityTypes().entrySet()) {
+            pages.add(NbtString.of(entityInfo.getKey() + entityInfo.getValue().getName().getString()));
+        }
+        DebugHandler.printDebug("Content Set");
     }
 }
