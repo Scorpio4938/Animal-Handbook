@@ -2,6 +2,7 @@ package com.scorpio4938.animalhandbook;
 
 import com.scorpio4938.animalhandbook.item.ModItemGroup;
 import com.scorpio4938.animalhandbook.item.ModItems;
+import com.scorpio4938.animalhandbook.service.debug.DebugHandler;
 import com.scorpio4938.animalhandbook.service.reader.EntityTypeReader;
 import net.fabricmc.api.ModInitializer;
 
@@ -22,6 +23,7 @@ public class AnimalHandbook implements ModInitializer {
         // Proceed with mild caution.
 
         LOGGER.info("Hello Fabric world!");
+        DebugHandler.printDebug("Debug enabled");
         ModItems.registerModItems();
         ModItemGroup.registerModItemGroup();
 
